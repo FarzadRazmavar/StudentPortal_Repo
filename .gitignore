@@ -1,0 +1,29 @@
+# Ignore log files
+*.log
+
+# Ignore obj files
+*.o
+
+# Ignore obj folder
+obj/
+
+# Ignore bin folder
+bin/
+
+# Ignore a.out
+a
+
+# Ignore all the executable files
+*.out
+
+# Ignore .cbp file
+*.cbp
+
+# Ignore .depend file
+*.depend
+
+# Ignore .layout file
+*.layout
+
+# Ignore .json files
+*.json
