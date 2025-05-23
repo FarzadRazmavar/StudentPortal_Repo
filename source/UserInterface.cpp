@@ -45,6 +45,8 @@
 *********************************************************************************
 */
 #include "UserInterface.h"
+#include <sstream>
+
 /*
 *********************************************************************************
 *                                                                               *
@@ -585,7 +587,7 @@ void UserInterface::mPrintMenu (enuMenuStateType enustate)
             mPrintLine (ArrCharMenuIdleLine7);
 
             /* Get user choice */
-            cin >> strInput;
+            getline(cin, strInput);
 
             *mPtrEnuMenuState = mConvertStrToEnu (strInput);
         }
@@ -614,7 +616,7 @@ void UserInterface::mPrintMenu (enuMenuStateType enustate)
             mPrintLine (ArrCharMenuStuLine5);
 
             /* Get user choice */
-            cin >> strInput;
+            getline(cin, strInput);
 
             *mPtrEnuMenuState = mConvertStrToEnu (strInput);
         }
@@ -635,19 +637,20 @@ void UserInterface::mPrintMenu (enuMenuStateType enustate)
             mPrintLine (ArrCharMenuAddStuLine2);
 
             /* Get student first name */
-            cin >> stuStudentInfo.firstName;
+            getline(cin, stuStudentInfo.firstName);
 
             /* print line 3 */
             mPrintLine (ArrCharMenuAddStuLine3);
 
             /* Get student last name */
-            cin >> stuStudentInfo.lastName;
+            getline(cin, stuStudentInfo.lastName);
 
             /* print line 4 */
             mPrintLine (ArrCharMenuAddStuLine4);
 
             /* Get student number */
-            cin >> stuStudentInfo.studentNumber;
+            getline(cin, strInput);
+            stringstream(strInput) >> stuStudentInfo.studentNumber;
 
             /* print line 5 */
             mPrintLine (ArrCharMenuAddStuLine5);

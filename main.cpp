@@ -106,19 +106,15 @@ int main()
      */
     system("clear");
     PtrUserInterface = UserInterface::get_Instance ();
+
     PtrUserInterface->mPrintMenu (IDLE_ST);
     system("clear");
+
     PtrUserInterface->mPrintMenu (*(PtrUserInterface->mPtrEnuMenuState));
     system("clear");
-    PtrUserInterface->mPrintMenu (*(PtrUserInterface->mPtrEnuMenuState));
 
-    vector<Student*>::iterator studentItr = PtrUserInterface->mPtrStudentsVecPtr->begin ();
-     for (studentItr = PtrUserInterface->mPtrStudentsVecPtr->begin ();
-          studentItr != PtrUserInterface->mPtrStudentsVecPtr->end ();
-          ++studentItr)
-    {
-        cout << (*studentItr)->get_StudentNumber () << endl;
-    }
+    PtrUserInterface->mPrintMenu (*(PtrUserInterface->mPtrEnuMenuState));
+    system("clear");
 
     return 0;
 }
